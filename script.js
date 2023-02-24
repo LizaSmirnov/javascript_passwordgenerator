@@ -5,8 +5,8 @@ var lowerCase = 'abcdefghijklmnop';
 var upperCase = 'ABCDEFGHIJKLMNO';
 var specialChar = '$@#%^&*^&*#@^(((%#$#';
 var numberChar = '123456789';
-var userChoices = ''
-var password = ''
+var userChoices = '';
+var password = '';
 // create the vars for checks
 
 var passwordLength;
@@ -39,21 +39,56 @@ function checkLength() {
   }
 }
 
+function promptForOptions(){
 
-function generatePassword() {
-  // ** look at the users selection and evaluate what the chosen options are
+  upperCaseCheck = confirm("Please choose if you would like any uppercase letters in your password.\n Yes or No.");
 
-  // if the user wanted lowercase
+  lowerCaseCheck = confirm("Please choose if you would like any lower case letters in your password.\n Yes or No.");
+
+  specialCharCheck = confirm("Please choose if you would like any special characters in your password.\n Yes or No.");
+
+  numberCharCheck= confirm("Please choose if you would like any number included in your password.\n Yes or No.");
+  return checkLength;
+}
+
+function generatePassword(){
+  if (lowerCaseCheck===true){
+    userChoices = userChoices + lowerCase;
+  } else  {
+    userChoices = userChoices +'';
+  };
   // -- dump all the lower case letter  into userChoices
 
   // if the user wanted uppercase
   // -- dump all the uppercase into userChoices
+  if (upperCaseCheck===true){
+    var userChoices = userChoices + upperCase;
+  } else {
+    var userChoices = userChoices +'';
+  };
 
   // if the user wanted x
   // -- dump all the x into userChoices
+  if (specialCharCheck===true){
+    var userChoices = userChoices + specialChar;
+  } else {
+    var userChoices = userChoices +'';
+  };
 
   // if the user wanted x
   // -- dump all the x into userChoices
+  if (numberCharCheck===true){
+    var userChoices = userChoices + numberChar;
+  } else {
+    var userChoices = userChoices +'';
+  };
+  
+  for(var i = 0; i < passwordLength; i++){
+    password += userChoices.charAt(Math.floor(Math.random() * userChoices.length));
+  }
+  console.log('password',password);
+  // return password;
+
 
 
   // for each char in our password length
@@ -61,23 +96,14 @@ function generatePassword() {
   // -- use that random number to index a random char
   // -- add that random char to the password 
   
-  // reach into the html - grabe the text area
-  // var passwordTextArea = document.querySelector("#password");
-  // stuff your password into that textareas value
-  // passwordTextArea.value = password;
-  
+  //reach into the html - grabe the text area
+  var passwordTextArea = document.querySelector("#password");
+  //stuff your password into that textareas value
+  passwordTextArea.value = password;
+  console.log(passwordTextArea.value);
 }
 
-function promptForOptions(){
 
-    upperCaseCheck = confirm("Please choose if you would like any uppercase letters in your password.\n Yes or No.");
-
-    lowerCaseCheck = confirm("Please choose if you would like any lower case letters in your password.\n Yes or No.");
-
-    specialCharCheck = confirm("Please choose if you would like any special characters in your password.\n Yes or No.");
-  
-    numberCharCheck= confirm("Please choose if you would like any number included in your password.\n Yes or No.");
-}
 
 
 
