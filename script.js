@@ -91,12 +91,8 @@ function generatePassword(){
 
 
 
-  // for each char in our password length
-  // -- gen a random number
-  // -- use that random number to index a random char
-  // -- add that random char to the password 
   
-  //reach into the html - grabe the text area
+  //reach into the html - grab the text area
   var passwordTextArea = document.querySelector("#password");
   //stuff your password into that textareas value
   passwordTextArea.value = password;
@@ -104,18 +100,6 @@ function generatePassword(){
 }
 
 
-
-
-
-// checkLength();
-
-
-
-
-// Write password to the #password input
-// function writePassword() {
-
-// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", checkLength);
