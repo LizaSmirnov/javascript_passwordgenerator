@@ -41,9 +41,9 @@
 
 ## Credits
 
--w3school.com (lifesaver)
--modules from classwork
--StackOverFlow.com
+- w3school.com (lifesaver)
+- modules from classwork
+- StackOverFlow.com
 
 ## Deployement
 https://lizasmirnov.github.io/javascript_passwordgenerator/
