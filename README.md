@@ -11,7 +11,8 @@
 
 ## Installation
 - Mostly workin on html first made sure the event listener was working correctly and redirect it to the first function I was going to use.
-  ![image](https://user-images.githubusercontent.com/122588135/221725862-b6ac2dd5-49aa-473e-8824-aa6bcc2ea253.png)
+ 
+ ![image](https://user-images.githubusercontent.com/122588135/221725862-b6ac2dd5-49aa-473e-8824-aa6bcc2ea253.png)
 
 - After that I made some global variables to store my information as I build my function.
   
